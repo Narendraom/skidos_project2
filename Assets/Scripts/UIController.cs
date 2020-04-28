@@ -11,7 +11,8 @@ public class UIController : MonoBehaviour
 
     public void FetchButtonClicked()
     {
+#if UNITY_ANDROID
         dataText.text = NativeBridge.RetreiveData();
-
+#endif
     }
 }
